@@ -36,7 +36,7 @@ nav ul li a::after {
     content: "";
     height: 3px;
     width: 0%;
-    background: #4CAF50;
+    background: #a2fc07;/*Quand on place le curceur sur le texte, une sorte de trait se remplit jusqu'à souligné tout le mot*/
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -228,3 +228,19 @@ input[type="number"] {
     border: 1px solid #ccc;
     font-size: 16px;
 }
+
+#formulaire{
+    text-align: center;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+.video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+

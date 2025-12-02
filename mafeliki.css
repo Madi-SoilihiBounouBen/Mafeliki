@@ -1,87 +1,132 @@
-*{
+/* ----- RESET SIMPLE ----- */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-nav{
-    width: 60%;
-    margin: 0px auto 10px auto;
-    background-color: rgb(162, 206, 147); /*Couleur de fond*/
-    position: static;
-    top: 0;
-    padding: 10px 0; /*Augmente la taille du marge d'en haut de la barre de navigation*/
-    margin-bottom: 10px;
-}
-    
-
-
-nav li{
-    width: 25%; /* Chaque élément <li> occupe 25% de la largeur */
-    text-align: center; /* Le texte dans chaque <li> est centré */
-    float: left; /* Les <li> s'alignent horizontalement les uns à côté des autres */
+/* ----- HEADER ----- */
+header {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #1B5E20;
 }
 
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav a{
-    display: block;
-    text-decoration: none;/* Supprime le soulignement du lien */
-    color: black;/* Couleur du texte du lien */
-    border-bottom: 2px solid transparent; /*sert pour l’effet au survol sur les textes */
-    padding: 10px 0px;/* Ajoute un espace vertical autour du texte */
-}
-
-/*Je personalise ma barre de navigation pour que je passe mon curseur dessus, il y a des effets*/
-nav a:hover{
-    color: blue;
-    border-bottom: 2px solid gold;
-}
-
-/*Je met en forme mon en-tête*/
-header{
-    background-color: #478f57; /*l'arrière plan de l'en-tête sera grisé */
-    padding: 30px; /*La marge du bas et celle d'en haut du texte sera augmenter*/
-    color: white; /*La couleur du texte mise en blanc*/
-    text-align: center;/*Le texte sera centrer*/
-    font-size: 25px; /*La taille du texte sera augment de 25 pixel*/
-}
-
-section{
-    /*Réparti les section  */
+/* ----- NAVIGATION ----- */
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 40px; /*Pour que les sectionnes ne soient pas collé*/
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
 }
 
-footer{
-    color: rgb(39, 37, 124);
-    background-color: beige;
+nav ul li a {
+    text-decoration: none;
+    color: #2E7D32;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #4CAF50;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ----- ARTICLES ----- */
+article {
+    width: 80%;
+    margin: 30px auto;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+/* ----- IMAGES AVEC ANIMATION ----- */
+article img {
+    width: 280px;
+    border-radius: 12px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article img:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ----- TITRES DE SECTIONS ----- */
+.producteurs {
     text-align: center;
+    margin-top: 40px;
 }
 
-.producteurs{
+/* ----- TABLEAU ----- */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover animé sur lignes */
+table tr:hover {
+    background: #f0fff0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ----- LIENS ----- */
+a {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #333;
+    color: white;
     text-align: center;
-}
-
-table{
-    width: 60%; /*la taille des cases en longueur*/
-    border-collapse: collapse; /* enlève les doubles bordures */
-    margin: 20px auto; /* centre le tableau */
-    font-family: Arial, sans-serif;/*La police d'écriture*/
-}
-
-td {
-    border: 1px solid #0c0101;/*La couleur des bordures*/
-    padding: 10px;/*Taille des cases en largeur */
-    text-align: center;/*Les textes sont centrer*/
-    background: rgb(203, 52, 178);
-}
-th{
-    border: 1px solid #0c0101;/*La couleur des bordures*/
-    padding: 10px;/*Taille des cases en largeur */
-    text-align: center;/*Les textes sont centrer*/
-    background: rgb(95, 203, 52);
 }

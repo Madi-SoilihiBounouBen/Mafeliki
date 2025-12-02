@@ -19,8 +19,8 @@
     <section><!--Début de section-->
         <nav><!--Barre de navigation-->
             <ul><!--Liste de navigation-->
-                <li><a href="">Fruit </a></li>
-                <li><a href="">Légume</a></li>
+                <li><a href="#fruit">Fruit</a></li>
+                <li><a href="#legume">Légume</a></li>
             </ul>
         </nav>
 
@@ -120,7 +120,92 @@
 
 
     <br><br>
-    <footer>Fruits et légumes</footer>
+
+    <section>
+
+        
+
+    
+
+        <form class="formulaire">
+
+    <div class="ligne">
+        <div class="champ">
+            <label for="prenom">Prénom(s) :</label>
+            <input type="text" name="prenom" id="prenom" required>
+        </div>
+
+        <div class="champ">
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+    </div>
+
+    <div class="ligne">
+        <div class="champ">
+            <label for="village">Village :</label>
+            <input type="text" name="village" id="village">
+        </div>
+
+        <div class="champ">
+            <label for="numeroTel">Numéro de téléphone :</label>
+            <input type="text" name="numeroTel" id="numeroTel">
+        </div>
+    </div>
+
+    <div class="ligne">
+        <div class="champ">
+            <label for="fruit">Fruit souhaité :</label>
+            <select id="fruit" name="fruit">
+                <option value="">-- Choisissez un fruit --</option>
+                <option value="banane">Banane</option>
+                <option value="papaye">Papaye</option>
+                <option value="mangue">Mangue</option>
+                <option value="fruit-a-pain">Fruit à pain</option>
+                <option value="orange">Orange</option>
+            </select>
+        </div>
+
+        <div class="champ">
+            <label for="quantite">Quantité :</label>
+            <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+        </div>
+    </div>
+
+
+    <div class="ligne">
+        <div class="champ">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email">
+        </div>
+    </div>
+
+    <div class="ligne">
+        <div class="champ">
+            <label for="commentaire">Commentaire :</label>
+            <textarea name="commentaire" id="commentaire"></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="envoyer">Envoyer</button>
+
+</form>
+
+
+
+
+    
+
+</html>
+
+    </section>
+
+
+    <footer>
+        <p>Tel: 0639lllllll</p>
+        <p>Mail:Mafeliki976@gmail.com</p>
+        <p>Président : Xisis Popcaan</p>
+    </footer>
 
 
 </body>

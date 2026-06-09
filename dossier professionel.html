@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Projet Mafeliki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        h2 {
+            color: #2E7D32;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #a2fc07;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #1B5E20;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1em;
+            line-height: 1.8;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+
+        pre code {
+            color: #f8f8f2;
+            background: none;
+            padding: 0;
+        }
+
+        .icon {
+            font-size: 1.3em;
+            margin-right: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: #f0f8f0;
+            border-left: 4px solid #2E7D32;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .feature-item strong {
+            color: #2E7D32;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            font-size: 1.05em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #a2fc07, transparent);
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Présentation du Projet Mafeliki</h1>
+            <p>Réaliser des interfaces utilisateur statiques web ou web mobile</p>
+        </header>
+
+        <!-- Section Structure de base HTML -->
+        <section>
+            <h2><span class="icon">🏗️</span>Les balises fondamentales du site</h2>
+
+            <h3>La déclaration DOCTYPE</h3>
+            <p>Tout d'abord, je commence par la balise <code>&lt;!DOCTYPE html&gt;</code>. C'est très important ! Elle dit au navigateur que je vais utiliser du HTML5, la dernière version du HTML.</p>
+
+            <h3>La balise &lt;html&gt;</h3>
+            <p>Ensuite, j'ouvre la balise <code>&lt;html lang="fr"&gt;</code>. L'attribut <code>lang="fr"</code> indique que mon site est en français. C'est utile pour les moteurs de recherche et pour les lecteurs d'écran.</p>
+
+            <h3>La balise &lt;head&gt;</h3>
+            <p>Je crée une balise <code>&lt;head&gt;</code> qui contient les informations sur ma page. C'est comme les "coulisses" du site - le navigateur ne les affiche pas directement, mais elles sont essentielles.</p>
+
+            <h3>Les métadonnées - &lt;meta&gt;</h3>
+            <p>À l'intérieur du head, je mets :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>&lt;meta charset="UTF-8"&gt;</code> : Cela dit au navigateur d'utiliser l'encodage UTF-8, ce qui me permet d'afficher correctement les caractères spéciaux comme les accents en français.</li>
+                <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> : C'est crucial ! Cette balise rend mon site responsive, c'est-à-dire qu'il s'adapte à la largeur de l'écran, que ce soit un téléphone, une tablette ou un ordinateur.</li>
+            </ul>
+
+            <h3>Le titre - &lt;title&gt;</h3>
+            <p>Je mets <code>&lt;title&gt;Mafeliki&lt;/title&gt;</code>. C'est le texte qui s'affiche dans l'onglet du navigateur et c'est aussi ce que les moteurs de recherche affichent dans les résultats.</p>
+
+            <h3>Le lien vers le CSS - &lt;link&gt;</h3>
+            <p>Enfin, je mets <code>&lt;link href="mafeliki.css" rel="stylesheet"&gt;</code>. C'est très important ! Cette balise relie mon fichier HTML à mon fichier CSS. L'attribut <code>rel="stylesheet"</code> dit au navigateur que le fichier est une feuille de style. Sans cette ligne, mon CSS ne s'appliquerait pas du tout.</p>
+
+            <h3>Exemple complet du projet :</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mafeliki&lt;/title&gt;
+    &lt;link href="mafeliki.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;!--L'en-tête--&gt;
+    &lt;header&gt;
+        &lt;h2&gt;Mafeliki les fruits et légumes de Mayotte&lt;/h2&gt;
+    &lt;/header&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <!-- Section Présentation générale -->
+        <section>
+            <h2><span class="icon">🎯</span>Présentation générale</h2>
+            <p>Bonjour, je m'appelle <strong>[Votre nom]</strong>, et je vous présente mon projet web que j'ai réalisé : <strong>Mafeliki - Les fruits et légumes de Mayotte</strong>.</p>
+            <p>J'ai créé un site statique qui met en avant les produits agricoles de Mayotte. C'est un site informatif et commercial qui présente les fruits et légumes locaux, ainsi qu'un annuaire de producteurs.</p>
+        </section>
+
+        <!-- Section Structure du site -->
+        <section>
+            <h2><span class="icon">📱</span>La structure globale du site</h2>
+
+            <h3>Organisation générale</h3>
+            <p>Mon site Mafeliki est organisé de manière logique et hiérarchique. Voici comment je structure tout le contenu :</p>
+
+            <h3>Le header - &lt;header&gt;</h3>
+            <p>Tout d'abord, je place un <code>&lt;header&gt;</code> au début du body. C'est une balise sémantique qui contient :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>&lt;h2&gt;Mafeliki les fruits et légumes de Mayotte&lt;/h2&gt;</code> : Le titre principal du site</li>
+            </ul>
+            <p>Le header a un rôle très important : c'est la première chose que voit le visiteur. Avec mon CSS, j'applique un dégradé vert attractif qui reflète le thème agricole.</p>
+
+            <h3>La navigation - &lt;nav&gt;</h3>
+            <p>Ensuite, je crée une barre de navigation avec la balise <code>&lt;nav&gt;</code> et une liste <code>&lt;ul&gt;</code> contenant trois liens :</p>
+            <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#fruit"&gt;Fruit&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#legume"&gt;Légume&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#formulaire"&gt;Formulaire&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            <p>Les <code>href="#fruit"</code>, <code>href="#legume"</code> sont des ancres qui permettent de naviguer vers les sections correspondantes en haut de la page.</p>
+
+            <h3>Les ancres HTML</h3>
+            <p>Pour que les liens de navigation fonctionnent, je dois ajouter des <code>id</code> aux articles correspondants :</p>
+            <pre><code>&lt;article id="legume"&gt;...&lt;/article&gt;
+&lt;article id="fruit"&gt;...&lt;/article&gt;
+&lt;section id="formulaire"&gt;...&lt;/section&gt;</code></pre>
+            <p>Quand on clique sur le lien "Fruit", le navigateur me déplace automatiquement à la section avec <code>id="fruit"</code>. C'est une navigation très fluide et efficace.</p>
+
+            <h3>Les sections contenant les produits</h3>
+            <p>Le contenu principal est organisé en articles avec deux produits principaux : Légume et Fruit. Chaque article suit la même structure pour la cohérence.</p>
+        </section>
+
+        <!-- Section Les articles -->
+        <section>
+            <h2><span class="icon">📄</span>La structure des articles</h2>
+            <p>Maintenant que j'ai parlé des balises de base et du CSS, je vais vous expliquer comment j'organise le contenu principal du site.</p>
+
+            <h3>La section principale - &lt;section&gt;</h3>
+            <p>J'entoure tous les articles dans une balise <code>&lt;section&gt;</code>. C'est une balise sémantique qui regroupe les contenus liés. Cela aide les moteurs de recherche et rend mon code plus lisible.</p>
+
+            <h3>La section Légume</h3>
+            <p>Je crée un <code>&lt;article&gt;</code> avec l'id "legume" pour pouvoir le cibler depuis la navigation avec le lien <code>&lt;a href="#legume"&gt;</code>.</p>
+            <p>À l'intérieur, je mets :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>&lt;h2&gt;Légume&lt;/h2&gt;</code> : Le titre de la section</li>
+                <li><code>&lt;p&gt;Un légume est...&lt;/p&gt;</code> : Une explication générale</li>
+                <li><code>&lt;img src="Manioc.jpg" alt="Manioc"&gt;</code> : L'image du produit avec une description alternative</li>
+                <li><code>&lt;p&gt;5€ le kilo&lt;/p&gt;</code> : Le prix</li>
+                <li><code>&lt;p&gt;Le manioc est...&lt;/p&gt;</code> : Une description détaillée</li>
+            </ul>
+
+            <h3>L'importance de l'attribut alt</h3>
+            <p>L'attribut <code>alt="Manioc"</code> est crucial ! Il sert à :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Accessibilité :</strong> Si un utilisateur utilise un lecteur d'écran, il entendra "Manioc" au lieu d'une image vide</li>
+                <li><strong>SEO :</strong> Les moteurs de recherche utilisent le texte alt pour comprendre le contenu de l'image</li>
+                <li><strong>Fallback :</strong> Si l'image ne charge pas, le texte alt s'affiche à la place</li>
+            </ul>
+
+            <h3>La section Fruit</h3>
+            <p>Je fais exactement la même structure avec un autre <code>&lt;article&gt;</code> id="fruit". La seule différence, c'est que j'ajoute un attribut <code>width="250"</code> sur l'image pour contrôler sa taille :</p>
+            <pre><code>&lt;img src="fruit à pain.jpg" alt="Fruit à pain" width="250"&gt;</code></pre>
+
+            <h3>Exemple complet d'un article du projet :</h3>
+            <pre><code>&lt;article id="legume"&gt;
+
+    &lt;h2&gt;Légume&lt;/h2&gt;
+    &lt;p&gt;
+        Un légume est la plante ou la partie d'une plante comestible d'une espèce potagère.
+    &lt;/p&gt;&lt;br&gt;
+
+    &lt;img src="Manioc.jpg" alt="Manioc"&gt;
+    &lt;p&gt;5€ le kilo&lt;/p&gt;&lt;br&gt;
+    
+    &lt;p&gt;
+        Le manioc est un tubercule populaire dans l'alimentation de plusieurs pays d'Afrique, d'Asie et d'Amérique du Sud et centrale...
+    &lt;/p&gt;
+
+&lt;/article&gt;</code></pre>
+        </section>
+
+        <!-- Section Les éléments additionnels -->
+        <section>
+            <h2><span class="icon">🔗</span>Les éléments additionnels du site</h2>
+
+            <h3>Le lien Facebook du projet</h3>
+            <p>J'ajoute un lien vers la page Facebook avec cette balise :</p>
+            <pre><code>&lt;div class="facebook"&gt;
+    &lt;!--Voici un lien pour se rendre sur la page facebook de Topical Concept Mayotte. Et target est là pour que le lien s'ouvre sur une autre page--&gt;
+    &lt;a href="https://www.facebook.com/TropicalConceptMayotte/?locale=fr_FR" target="_blank"&gt;
+        
+        Notre page facebook &lt;!--La phrase qui va s'affiché à la place du lien--&gt;
+
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            <p>Points importants :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>J'utilise une <code>&lt;div class="facebook"&gt;</code> pour pouvoir le styliser avec du CSS</li>
+                <li>L'attribut <code>target="_blank"</code> est très important - il ouvre le lien dans un nouvel onglet, ce qui permet au visiteur de rester sur mon site</li>
+                <li>L'URL complète inclut le paramètre <code>locale=fr_FR</code> pour que la page Facebook s'affiche en français</li>
+            </ul>
+
+            <h3>Le tableau des producteurs du projet</h3>
+            <p>Je crée un tableau pour afficher les producteurs avec cette vraie structure :</p>
+            <pre><code>&lt;h2 class="producteurs"&gt;
+    Tableau de producteurs de fruits et légumes à Mayotte
+&lt;/h2&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nom&lt;/th&gt;
+        &lt;th&gt;Prénom&lt;/th&gt;
+        &lt;th&gt;entreprise&lt;/th&gt;
+        &lt;th&gt;Type de produit&lt;/th&gt;
+        &lt;th&gt;village&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Hamada&lt;/td&gt;
+        &lt;td&gt;Oumar&lt;/td&gt;
+        &lt;td&gt;Mayana Léguime&lt;/td&gt;
+        &lt;td&gt;Banane&lt;/td&gt;
+        &lt;td&gt;Mtsamboro&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            <p>Explication :</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>&lt;table&gt;</code> : La balise qui crée le tableau</li>
+                <li><code>&lt;tr&gt;</code> : Table Row - une rangée du tableau</li>
+                <li><code>&lt;th&gt;</code> : Table Header - un en-tête (dans la première rangée)</li>
+                <li><code>&lt;td&gt;</code> : Table Data - une cellule de données</li>
+            </ul>
+
+            <h3>Le formulaire du projet</h3>
+            <p>J'ajoute un formulaire pour que les visiteurs puissent faire des commandes. Voici la vraie structure de mon formulaire :</p>
+            <pre><code>&lt;section id="formulaire"&gt;
+    &lt;h2 class="formulaire"&gt;formulaire&lt;/h2&gt;
+    &lt;form class="formulaire"&gt;
+        &lt;div class="ligne"&gt;
+            &lt;div class="champ"&gt;
+                &lt;label for="prenom"&gt;Prénom(s) :&lt;/label&gt;
+                &lt;input type="text" name="prenom" id="prenom" required&gt;
+            &lt;/div&gt;
+            &lt;div class="champ"&gt;
+                &lt;label for="nom"&gt;Nom :&lt;/label&gt;
+                &lt;input type="text" name="nom" id="nom" required&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="ligne"&gt;
+            &lt;div class="champ"&gt;
+                &lt;label for="fruit"&gt;Fruit souhaité :&lt;/label&gt;
+                &lt;select id="fruit" name="fruit"&gt;
+                    &lt;option value=""&gt;-- Choisissez un fruit --&lt;/option&gt;
+                    &lt;option value="banane"&gt;Banane&lt;/option&gt;
+                    &lt;option value="papaye"&gt;Papaye&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class="champ"&gt;
+                &lt;label for="quantite"&gt;Quantité :&lt;/label&gt;
+                &lt;input type="number" id="quantite" name="quantite" min="1" max="100" value="1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;button type="submit" class="envoyer"&gt;Envoyer&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+
+            <h3>La vidéo YouTube</h3>
+            <p>J'intègre une vidéo YouTube directement dans la page avec une balise <code>&lt;iframe&gt;</code> :</p>
+            <pre><code>&lt;div class="video"&gt;
+    &lt;iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/JwukBe1bk6I" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+            <p>L'<code>&lt;iframe&gt;</code> (inline frame) me permet d'incruster du contenu d'un autre site. C'est très utile pour les vidéos YouTube, les cartes Google Maps, etc.</p>
+
+            <h3>Le footer</h3>
+            <p>À la fin du site, j'ajoute un footer avec les informations de contact :</p>
+            <pre><code>&lt;footer&gt;
+    &lt;p&gt;Tel: 0639lllllll&lt;/p&gt;
+    &lt;p&gt;Mail: Mafeliki976@gmail.com&lt;/p&gt;
+    &lt;p&gt;Président : Xisis Popcaan&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </section>
+
+        <!-- Section Le style CSS -->
+        <section>
+            <h2><span class="icon">🎨</span>La feuille de style CSS (mafeliki.css)</h2>
+            <p>Maintenant, je vais vous expliquer comment je crée le fichier <code>mafeliki.css</code> et toutes les règles CSS que j'applique pour rendre mon site beau et fonctionnel.</p>
+
+            <h3>Réinitialisation générale</h3>
+            <p>Je commence par réinitialiser tous les styles par défaut du navigateur avec le sélecteur universel <code>*</code> :</p>
+            <pre><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/*L'en-tête*/
+header {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #1B5E20;
+}</code></pre>
+
+            <h3>La navigation CSS du projet</h3>
+            <p>Voici le vrai code CSS de ma navigation avec l'effet au survol :</p>
+            <pre><code>/*NAVIGATION*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2E7D32;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #a2fc07;/*Quand on place le curseur sur le texte, une sorte de trait se remplit jusqu'à souligner tout le mot*/
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}</code></pre>
+            </ul>
+
+            <h3>Les articles du projet</h3>
+            <p>Voici comment je stylise les articles :</p>
+            <pre><code>/*ARTICLES*/
+article {
+    width: 80%;
+    margin: 30px auto;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+}</code></pre>
+            <p>J'ajoute une animation ! Quand on survole un article, il grandit légèrement (scale(1.02)). C'est très dynamique !</p>
+
+            <h3>Les images avec animation du projet</h3>
+            <p>Pour les images, j'ajoute une animation encore plus spectaculaire :</p>
+            <pre><code>/*IMAGES AVEC ANIMATION*/
+article img {
+    width: 280px;
+    border-radius: 12px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article img:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}</code></pre>
+
+            <h3>Le tableau CSS du projet</h3>
+            <p>Pour le tableau, j'ajoute des styles modernes et une animation au survol :</p>
+            <pre><code>/*TABLEAU*/
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover animé sur lignes */
+table tr:hover {
+    background: #f0fff0;
+    cursor: pointer;
+    transition: 0.3s;
+}</code></pre>
+
+            <h3>Le formulaire CSS du projet</h3>
+            <p>Voici comment je stylise le formulaire du projet :</p>
+            <pre><code>/*Formulaire général*/
+.formulaire {
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/*Lignes du formulaire*/
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/*Champs individuels*/
+.champ {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Labels*/
+.champ label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2E7D32;
+}
+
+/*Input + Textarea*/
+.champ input,
+.champ textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Effet focus */
+.champ input:focus,
+.champ textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}</code></pre>
+            <p>J'utilise des classes pour mieux organiser le code. Chaque ligne du formulaire utilise <code>display: flex</code> pour afficher deux champs côte à côte ! Au focus, la bordure devient verte pour montrer que le champ est actif.</p>
+        </section>
+
+        <!-- Section Fonctionnalités -->
+        <section>
+            <h2><span class="icon">✅</span>Fonctionnalités</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <strong>🌐 Site responsive :</strong> J'ai mis la balise <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> pour que le site s'adapte à tous les appareils (téléphone, tablette, ordinateur).
+                </div>
+                <div class="feature-item">
+                    <strong>♿ Accessibilité :</strong> J'utilise les bonnes balises sémantiques (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>), j'ajoute des attributs <code>alt</code> sur mes images.
+                </div>
+                <div class="feature-item">
+                    <strong>🗺️ Navigation fluide :</strong> Les liens permettent de naviguer facilement entre les sections avec des ancres (<code>#fruit</code>, <code>#legume</code>).
+                </div>
+                <div class="feature-item">
+                    <strong>🎭 Design moderne :</strong> Dégradés, animations au survol, espacement bien pensé.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Technologie -->
+        <section>
+            <h2><span class="icon">🛠️</span>Technologie utilisée</h2>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>HTML5 :</strong> Pour la structure sémantique du site</li>
+                <li><strong>CSS3 :</strong> Pour le design, les dégradés, les animations et la responsivité</li>
+                <li><strong>Images :</strong> Intégrées localement (Manioc.jpg, fruit à pain.jpg)</li>
+            </ul>
+        </section>
+
+        <!-- Section Conclusion -->
+        <section class="conclusion">
+            <h2 style="color: white; border-bottom: 3px solid #a2fc07;"><span class="icon">💡</span>Conclusion</h2>
+            <p style="color: white; margin-top: 15px;">Ce projet démontre ma capacité à créer une interface utilisateur statique attrayante et fonctionnelle. J'ai su structurer le contenu de manière logique, appliquer des styles modernes et créer une expérience utilisateur agréable. Le site est simple à maintenir et peut facilement être étendu avec des fonctionnalités dynamiques à l'avenir.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 - Présentation Projet Mafeliki</p>
+        </footer>
+    </div>
+</body>
+</html>
